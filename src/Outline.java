@@ -15,6 +15,7 @@ public class Outline {
     question4();
     question5();
     question6();
+    question7();
     }
     public static String[] createList() {
       return new String[]{"all", "ball", "crawl", "apples", "bananas", "egg", "elephant"};
@@ -98,6 +99,17 @@ public class Outline {
     List<String> evenLengthWords = StringUtils.allMatchesV2(words, s -> (s.length() % 2) == 0);
     evenLengthWords.stream().forEach(System.out::println);
 
+  }
+
+  public static void question7() {
+    List<String> words = Arrays.asList("Hello", "eeee","book", "even");
+    System.out.println("Q7: ");
+    List<String> excitingWords = StringUtils.transformedList(words, s -> s + "!");
+    excitingWords.stream().forEach(System.out::println);
+    List<String> eyeWords = StringUtils.transformedList(words, s -> s.replace("i", "eye"));
+    eyeWords.stream().forEach(System.out::println);
+    List<String> upperCaseWords = StringUtils.transformedList(words, String::toUpperCase);
+    upperCaseWords.stream().forEach(System.out::println);
   }
   }
 
