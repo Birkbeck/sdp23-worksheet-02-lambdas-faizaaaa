@@ -16,6 +16,7 @@ public class Outline {
     question5();
     question6();
     question7();
+    question8();
     }
     public static String[] createList() {
       return new String[]{"all", "ball", "crawl", "apples", "bananas", "egg", "elephant"};
@@ -109,6 +110,17 @@ public class Outline {
     List<String> eyeWords = StringUtils.transformedList(words, s -> s.replace("i", "eye"));
     eyeWords.stream().forEach(System.out::println);
     List<String> upperCaseWords = StringUtils.transformedList(words, String::toUpperCase);
+    upperCaseWords.stream().forEach(System.out::println);
+  }
+
+  public static void question8() {
+    List<String> words = Arrays.asList("Hello", "eeee","book", "even", "igloo");
+    System.out.println("Q8: ");
+    List<String> excitingWords = StringUtils.transformedList2(words, s -> s + "!");
+    excitingWords.stream().forEach(System.out::println);
+    List<String> eyeWords = StringUtils.transformedList2(words, s -> s.replace("i", "eye"));
+    eyeWords.stream().forEach(System.out::println);
+    List<String> upperCaseWords = StringUtils.transformedList2(words, String::toUpperCase);
     upperCaseWords.stream().forEach(System.out::println);
   }
   }

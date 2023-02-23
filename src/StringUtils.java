@@ -47,4 +47,13 @@ public class StringUtils {
         return newList;
     }
 
+    public static <T> List<T> transformedList2(List<T> list, Function<T,T> f) {
+        List<T> newList = new ArrayList<>();
+        for(T element : list) {
+            T s = f.apply(element);
+            newList.add(s);
+        }
+        return newList;
+    }
+
 }
