@@ -27,4 +27,14 @@ public class StringUtils {
         }
         return s;
     }
+    public static <T> List<T> allMatchesV2 (List<T> List, Predicate<T> predicate){
+        List<T> s = new ArrayList<>();
+        for(T element : List) {
+            if (predicate.test(element)) {
+                s.add(element);
+            }
+        }
+        return s;
+    }
+
 }
